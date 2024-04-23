@@ -1,0 +1,16 @@
+<div class="content">
+  <h1>Currency Converter</h1>
+  <input type="number" [(ngModel)]="amount">
+  <label> From: </label>
+  <select name="" id="">
+    <option>{{ from }}</option>
+  </select>
+  <label> To: </label>
+  <select name="" id="">
+    <option>{{ to }}</option>
+  </select>
+  <br>
+  <span class="output" [style.color]="amount<0 ? 'red': ''">
+    {{ amount.toFixed(2) }} {{ from }} = {{ convert().toFixed(2) }} {{ to }}
+  </span>
+</div>
